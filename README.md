@@ -11,24 +11,30 @@ The textual data is available in `jobs.csv` file. The extracted images are in `i
 You will need Python 3.x to run the scripts.
 Python can be downloaded [here](https://www.python.org/downloads/).
 
-You have to install Scrapy framework:
+You will need also Google Chrome to scrape the courses.
+
+Install Scrapy framework:
 * In command prompt/Terminal: `pip install scrapy`
 * If you are using [Anaconda Python distribution](https://anaconda.org/anaconda/python): `conda install -c conda-forge scrapy`
 
-You have to install also Selenium:
+Install Selenium:
 * In command prompt/Terminal: `pip install selenium`
 * If you are using [Anaconda Python distribution](https://anaconda.org/anaconda/python): `conda install -c conda-forge selenium`
 
-Once you have installed Scrapy and Selenium, just clone/download this project, access the folder in command prompt/Terminal and run the following command:
+Download and save [Chromedriver](https://chromedriver.chromium.org/downloads), according with your Google Chrome version.
+
+After downloading Chromedriver, you must set the [Chromedriver](https://github.com/alynnebc/scrapping-classcentral/blob/cb2dcff6c32430610513b4e4513175b7121d4cc8/scrapping_classcentral/spiders/classcentral.py#L27) and [Google Chrome](https://github.com/alynnebc/scrapping-classcentral/blob/cb2dcff6c32430610513b4e4513175b7121d4cc8/scrapping_classcentral/spiders/classcentral.py#L28) paths on your machine.
+
+Once you have installed Scrapy, Selenium and Chromedriver, just clone/download this project, access the folder in command prompt/Terminal and run the following command:
 
 `scrapy crawl classcentral -o courses.csv`
 
-This command will scrape, by default, all Data Science courses in class central. To scrape other [listed subject](https://www.classcentral.com/subjects) on class central, run the following command:
+This command will scrape, by default, all Data Science courses in class central. To scrape other [listed subject](https://www.classcentral.com/subjects), run the following command:
 
 `scrapy crawl classcentral -a subject="Subject Name" -o courses.csv`
 
-So, to scrape the Health & Medicine courses, you need to run the following command:
+So, to scrape the [Health & Medicine courses](https://www.classcentral.com/subject/health), you need to run the following command:
 
 `scrapy crawl classcentral -a subject="Health & Medicine" -o courses.csv`
 
-You can change the output format to JSON or XML by change the output file extension (ex: `jobs.json`).
+You can change the output format to JSON or XML by change the output file extension (ex: `courses.json`).
