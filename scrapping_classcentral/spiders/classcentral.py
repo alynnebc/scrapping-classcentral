@@ -24,9 +24,9 @@ class ClasscentralSpider(scrapy.Spider):
     
     def parse_subject(self, response):
         options = Options()
-        driver_path = '/home/higo/Downloads/chromedriver'
-        brave_path = '/opt/brave.com/brave/brave'
-        options.binary_location = brave_path
+        driver_path = '###' #Your Chrome Webdriver Path
+        browser_path = '###' #Your Google Chrome Path
+        options.binary_location = browser_path
 
         self.driver = webdriver.Chrome(options=options, executable_path=driver_path)
         self.driver.get(response.url)
