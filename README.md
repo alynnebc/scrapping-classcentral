@@ -4,7 +4,7 @@ This project scrape data about Engineering job offers in New York City from [cla
 
 The project has one spider able to some textual data (name, platform, language and URL) of all online courses in a subject of study.
 
-The textual data is available in `jobs.csv` file. The extracted images are in `images` folder.
+The textual data is available in `courses.csv` file.
 
 # How to use
 
